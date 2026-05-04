@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bgbakkb6h6iy8"]
 
 [ext_resource type="PackedScene" uid="uid://b2ps0a7dpv2e6" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://chqlmrjivkg5v" path="res://addons/godot_rl_agents/sync.gd" id="2_0xm2m"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
 size = Vector3(60, 2, 60)
@@ -30,3 +31,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 transform = Transform3D(-3.090862e-08, 0.70710677, -0.7071068, 3.0908616e-08, 0.7071068, 0.70710677, 1, 0, -4.371139e-08, -16, 15, 0)
 projection = 1
 size = 30.0
+
+[node name="Sync" type="Node" parent="." unique_id=1014860788]
+script = ExtResource("2_0xm2m")
+metadata/_custom_type_script = "uid://chqlmrjivkg5v"
