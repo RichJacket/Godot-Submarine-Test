@@ -1,15 +1,24 @@
 extends AIController3D
 
-# Stores the actions sampled for the agent's policy, running in python
+@onready var raycast_sensor := $RayCastSensor3D
+
 var rotate_action : Vector3
 var move_action : Vector3
 
+func _physics_process(_delta):
+	n_steps += 1
+	# A time-out for the player
+	if n_steps > reset_after:
+		_player.game_over(-5)
+
 func get_obs() -> Dictionary:
-	# get the balls position and velocity in the paddle's frame of reference
+	# Get the raycast data & player position, velocity & rotation
+	var obs: Array[float] = []
+	obs.append_array(raycast_sensor.get_observation())
 	var player_position = _player.global_position
 	var player_velocity = _player.velocity
 	var player_angle = _player.transform.basis.get_euler()
-	var obs = [
+	obs.append_array([
 		player_position.x,
 		player_position.z,
 		player_position.y,
@@ -19,13 +28,17 @@ func get_obs() -> Dictionary:
 		player_angle.x,
 		player_angle.z,
 		player_angle.y,
-	]
+	])
 
 	return {"obs":obs}
 
 func get_reward() -> float:	
 	return reward
-	
+
+## Resets the AIController (e.g. when game is over)
+func reset():
+	super.reset()
+
 func get_action_space() -> Dictionary:
 	return {
 		"rotate_action" : {

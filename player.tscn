@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://65x4221suk4d" path="res://player.gd" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://dvh066efnghlv" path="res://controller.gd" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://cbtuygv56obcw" path="res://addons/godot_rl_agents/sensors/sensors_3d/RaycastSensor3D.gd" id="3_i3pqv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4flbx"]
 radius = 0.26
@@ -29,10 +30,916 @@ mesh = SubResource("BoxMesh_onrkg")
 
 [node name="AIController3D" type="Node3D" parent="." unique_id=712265625]
 script = ExtResource("2_onrkg")
-control_mode = null
-onnx_model_path = null
-reset_after = null
-expert_demo_save_path = null
-action_repeat = null
-policy_name = null
 metadata/_custom_type_script = "uid://umaj57fwhxlm"
+
+[node name="RayCastSensor3D" type="Node3D" parent="AIController3D" unique_id=1009230713]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.7, 0, 0)
+script = ExtResource("3_i3pqv")
+boolean_class_mask = 2
+n_rays_width = 15.0
+n_rays_height = 15.0
+cone_width = 120.0
+cone_height = 90.0
+collide_with_areas = true
+class_sensor = true
+metadata/_custom_type_script = "uid://cbtuygv56obcw"
+
+[node name="@RayCast3D@66986" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1111161125]
+target_position = Vector3(-6.1609497, -6.691306, 4.155613)
+collide_with_areas = true
+
+[node name="@RayCast3D@66987" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=221910674]
+target_position = Vector3(-6.7070546, -5.8778524, 4.523966)
+collide_with_areas = true
+
+[node name="@RayCast3D@66988" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=613309301]
+target_position = Vector3(-7.179676, -5, 4.8427525)
+collide_with_areas = true
+
+[node name="@RayCast3D@66989" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=21803205]
+target_position = Vector3(-7.573635, -4.0673666, 5.1084814)
+collide_with_areas = true
+
+[node name="@RayCast3D@66990" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1737281008]
+target_position = Vector3(-7.884616, -3.09017, 5.3182406)
+collide_with_areas = true
+
+[node name="@RayCast3D@66991" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1052756220]
+target_position = Vector3(-8.109211, -2.0791168, 5.469732)
+collide_with_areas = true
+
+[node name="node_0_0 6_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=795489446]
+target_position = Vector3(-8.24496, -1.0452846, 5.561296)
+collide_with_areas = true
+
+[node name="node_0_0 7_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=104602643]
+target_position = Vector3(-8.290376, 0, 5.591929)
+collide_with_areas = true
+
+[node name="node_0_0 8_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1614792482]
+target_position = Vector3(-8.24496, 1.0452846, 5.561296)
+collide_with_areas = true
+
+[node name="node_0_0 9_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=2035712014]
+target_position = Vector3(-8.109211, 2.0791168, 5.469732)
+collide_with_areas = true
+
+[node name="node_0_0 10_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1342763171]
+target_position = Vector3(-7.884616, 3.09017, 5.3182406)
+collide_with_areas = true
+
+[node name="node_0_0 11_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1974034965]
+target_position = Vector3(-7.573635, 4.0673666, 5.1084814)
+collide_with_areas = true
+
+[node name="node_0_0 12_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=2022829326]
+target_position = Vector3(-7.179676, 5, 4.8427525)
+collide_with_areas = true
+
+[node name="node_0_0 13_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=122660318]
+target_position = Vector3(-6.7070546, 5.8778524, 4.523966)
+collide_with_areas = true
+
+[node name="node_0_0 14_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=2050523547]
+target_position = Vector3(-6.1609497, 6.691306, 4.155613)
+collide_with_areas = true
+
+[node name="@RayCast3D@66992" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=451952972]
+target_position = Vector3(-5.522642, -6.691306, 4.9726095)
+collide_with_areas = true
+
+[node name="@RayCast3D@66993" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1552571248]
+target_position = Vector3(-6.012168, -5.8778524, 5.41338)
+collide_with_areas = true
+
+[node name="@RayCast3D@66994" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=672834915]
+target_position = Vector3(-6.435823, -5, 5.794841)
+collide_with_areas = true
+
+[node name="@RayCast3D@66995" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=613022177]
+target_position = Vector3(-6.7889657, -4.0673666, 6.112812)
+collide_with_areas = true
+
+[node name="@RayCast3D@66996" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=2107066243]
+target_position = Vector3(-7.067727, -3.09017, 6.36381)
+collide_with_areas = true
+
+[node name="@RayCast3D@66997" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1336638572]
+target_position = Vector3(-7.2690535, -2.0791168, 6.545085)
+collide_with_areas = true
+
+[node name="node_1_0 6_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=258503677]
+target_position = Vector3(-7.390738, -1.0452846, 6.65465)
+collide_with_areas = true
+
+[node name="node_1_0 7_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=308751894]
+target_position = Vector3(-7.4314485, 0, 6.691306)
+collide_with_areas = true
+
+[node name="node_1_0 8_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=953718727]
+target_position = Vector3(-7.390738, 1.0452846, 6.65465)
+collide_with_areas = true
+
+[node name="node_1_0 9_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1473096987]
+target_position = Vector3(-7.2690535, 2.0791168, 6.545085)
+collide_with_areas = true
+
+[node name="node_1_0 10_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=2066618331]
+target_position = Vector3(-7.067727, 3.09017, 6.36381)
+collide_with_areas = true
+
+[node name="node_1_0 11_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1548917334]
+target_position = Vector3(-6.7889657, 4.0673666, 6.112812)
+collide_with_areas = true
+
+[node name="node_1_0 12_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1729581729]
+target_position = Vector3(-6.435823, 5, 5.794841)
+collide_with_areas = true
+
+[node name="node_1_0 13_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=538235843]
+target_position = Vector3(-6.012168, 5.8778524, 5.41338)
+collide_with_areas = true
+
+[node name="node_1_0 14_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1119521646]
+target_position = Vector3(-5.522642, 6.691306, 4.9726095)
+collide_with_areas = true
+
+[node name="@RayCast3D@66998" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=842197152]
+target_position = Vector3(-4.776843, -6.691306, 5.6928196)
+collide_with_areas = true
+
+[node name="@RayCast3D@66999" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1272220131]
+target_position = Vector3(-5.200261, -5.8778524, 6.1974297)
+collide_with_areas = true
+
+[node name="@RayCast3D@67000" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1575563854]
+target_position = Vector3(-5.566704, -5, 6.6341395)
+collide_with_areas = true
+
+[node name="@RayCast3D@67001" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=894503731]
+target_position = Vector3(-5.872157, -4.0673666, 6.998164)
+collide_with_areas = true
+
+[node name="@RayCast3D@67002" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1439188711]
+target_position = Vector3(-6.1132736, -3.09017, 7.285516)
+collide_with_areas = true
+
+[node name="@RayCast3D@67003" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1946371049]
+target_position = Vector3(-6.2874117, -2.0791168, 7.4930453)
+collide_with_areas = true
+
+[node name="node_2_0 6_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=369395687]
+target_position = Vector3(-6.3926635, -1.0452846, 7.6184797)
+collide_with_areas = true
+
+[node name="node_2_0 7_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=405150311]
+target_position = Vector3(-6.427876, 0, 7.6604443)
+collide_with_areas = true
+
+[node name="node_2_0 8_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=84540965]
+target_position = Vector3(-6.3926635, 1.0452846, 7.6184797)
+collide_with_areas = true
+
+[node name="node_2_0 9_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=369993496]
+target_position = Vector3(-6.2874117, 2.0791168, 7.4930453)
+collide_with_areas = true
+
+[node name="node_2_0 10_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=2058225171]
+target_position = Vector3(-6.1132736, 3.09017, 7.285516)
+collide_with_areas = true
+
+[node name="node_2_0 11_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=819625303]
+target_position = Vector3(-5.872157, 4.0673666, 6.998164)
+collide_with_areas = true
+
+[node name="node_2_0 12_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1948660965]
+target_position = Vector3(-5.566704, 5, 6.6341395)
+collide_with_areas = true
+
+[node name="node_2_0 13_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=535332341]
+target_position = Vector3(-5.200261, 5.8778524, 6.1974297)
+collide_with_areas = true
+
+[node name="node_2_0 14_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=266467680]
+target_position = Vector3(-4.776843, 6.691306, 5.6928196)
+collide_with_areas = true
+
+[node name="@RayCast3D@67004" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=375365375]
+target_position = Vector3(-3.9380677, -6.691306, 6.3022256)
+collide_with_areas = true
+
+[node name="@RayCast3D@67005" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1287753655]
+target_position = Vector3(-4.287137, -5.8778524, 6.860853)
+collide_with_areas = true
+
+[node name="@RayCast3D@67006" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=600942071]
+target_position = Vector3(-4.5892353, -5, 7.3443117)
+collide_with_areas = true
+
+[node name="@RayCast3D@67007" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1433711511]
+target_position = Vector3(-4.8410535, -4.0673666, 7.747305)
+collide_with_areas = true
+
+[node name="@RayCast3D@67008" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=529555107]
+target_position = Vector3(-5.0398316, -3.09017, 8.065416)
+collide_with_areas = true
+
+[node name="@RayCast3D@67009" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1922717380]
+target_position = Vector3(-5.1833925, -2.0791168, 8.295162)
+collide_with_areas = true
+
+[node name="node_3_0 6_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=363572541]
+target_position = Vector3(-5.270163, -1.0452846, 8.434024)
+collide_with_areas = true
+
+[node name="node_3_0 7_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=944828283]
+target_position = Vector3(-5.2991924, 0, 8.480481)
+collide_with_areas = true
+
+[node name="node_3_0 8_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=909980615]
+target_position = Vector3(-5.270163, 1.0452846, 8.434024)
+collide_with_areas = true
+
+[node name="node_3_0 9_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1756358516]
+target_position = Vector3(-5.1833925, 2.0791168, 8.295162)
+collide_with_areas = true
+
+[node name="node_3_0 10_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=190096004]
+target_position = Vector3(-5.0398316, 3.09017, 8.065416)
+collide_with_areas = true
+
+[node name="node_3_0 11_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1553571125]
+target_position = Vector3(-4.8410535, 4.0673666, 7.747305)
+collide_with_areas = true
+
+[node name="node_3_0 12_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=463444799]
+target_position = Vector3(-4.5892353, 5, 7.3443117)
+collide_with_areas = true
+
+[node name="node_3_0 13_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1133029259]
+target_position = Vector3(-4.287137, 5.8778524, 6.860853)
+collide_with_areas = true
+
+[node name="node_3_0 14_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=592798038]
+target_position = Vector3(-3.9380677, 6.691306, 6.3022256)
+collide_with_areas = true
+
+[node name="@RayCast3D@67010" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1941210966]
+target_position = Vector3(-3.0226424, -6.691306, 6.7889657)
+collide_with_areas = true
+
+[node name="@RayCast3D@67011" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1114708550]
+target_position = Vector3(-3.2905686, -5.8778524, 7.390738)
+collide_with_areas = true
+
+[node name="@RayCast3D@67012" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=130341153]
+target_position = Vector3(-3.5224426, -5, 7.9115357)
+collide_with_areas = true
+
+[node name="@RayCast3D@67013" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1547384892]
+target_position = Vector3(-3.7157242, -4.0673666, 8.345653)
+collide_with_areas = true
+
+[node name="@RayCast3D@67014" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1666381817]
+target_position = Vector3(-3.8682954, -3.09017, 8.6883335)
+collide_with_areas = true
+
+[node name="@RayCast3D@67015" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=2092596903]
+target_position = Vector3(-3.9784846, -2.0791168, 8.935823)
+collide_with_areas = true
+
+[node name="node_4_0 6_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1596795133]
+target_position = Vector3(-4.045085, -1.0452846, 9.085409)
+collide_with_areas = true
+
+[node name="node_4_0 7_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1637133128]
+target_position = Vector3(-4.0673666, 0, 9.135454)
+collide_with_areas = true
+
+[node name="node_4_0 8_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=225801315]
+target_position = Vector3(-4.045085, 1.0452846, 9.085409)
+collide_with_areas = true
+
+[node name="node_4_0 9_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1312742367]
+target_position = Vector3(-3.9784846, 2.0791168, 8.935823)
+collide_with_areas = true
+
+[node name="node_4_0 10_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=2038117910]
+target_position = Vector3(-3.8682954, 3.09017, 8.6883335)
+collide_with_areas = true
+
+[node name="node_4_0 11_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=688598632]
+target_position = Vector3(-3.7157242, 4.0673666, 8.345653)
+collide_with_areas = true
+
+[node name="node_4_0 12_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=669657664]
+target_position = Vector3(-3.5224426, 5, 7.9115357)
+collide_with_areas = true
+
+[node name="node_4_0 13_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1588767108]
+target_position = Vector3(-3.2905686, 5.8778524, 7.390738)
+collide_with_areas = true
+
+[node name="node_4_0 14_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=882842071]
+target_position = Vector3(-3.0226424, 6.691306, 6.7889657)
+collide_with_areas = true
+
+[node name="@RayCast3D@67016" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1420749534]
+target_position = Vector3(-2.0483847, -6.691306, 7.1435666)
+collide_with_areas = true
+
+[node name="@RayCast3D@67017" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=232390558]
+target_position = Vector3(-2.229953, -5.8778524, 7.7767706)
+collide_with_areas = true
+
+[node name="@RayCast3D@67018" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1933501139]
+target_position = Vector3(-2.3870895, -5, 8.324771)
+collide_with_areas = true
+
+[node name="@RayCast3D@67019" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1494382110]
+target_position = Vector3(-2.5180726, -4.0673666, 8.781563)
+collide_with_areas = true
+
+[node name="@RayCast3D@67020" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1285054328]
+target_position = Vector3(-2.621467, -3.09017, 9.142142)
+collide_with_areas = true
+
+[node name="@RayCast3D@67021" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=676126343]
+target_position = Vector3(-2.6961403, -2.0791168, 9.402558)
+collide_with_areas = true
+
+[node name="node_5_0 6_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=822166511]
+target_position = Vector3(-2.7412739, -1.0452846, 9.559958)
+collide_with_areas = true
+
+[node name="node_5_0 7_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1474574905]
+target_position = Vector3(-2.7563736, 0, 9.612617)
+collide_with_areas = true
+
+[node name="node_5_0 8_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1582860142]
+target_position = Vector3(-2.7412739, 1.0452846, 9.559958)
+collide_with_areas = true
+
+[node name="node_5_0 9_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1406498809]
+target_position = Vector3(-2.6961403, 2.0791168, 9.402558)
+collide_with_areas = true
+
+[node name="node_5_0 10_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1088059329]
+target_position = Vector3(-2.621467, 3.09017, 9.142142)
+collide_with_areas = true
+
+[node name="node_5_0 11_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=816579199]
+target_position = Vector3(-2.5180726, 4.0673666, 8.781563)
+collide_with_areas = true
+
+[node name="node_5_0 12_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1652391627]
+target_position = Vector3(-2.3870895, 5, 8.324771)
+collide_with_areas = true
+
+[node name="node_5_0 13_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1002738550]
+target_position = Vector3(-2.229953, 5.8778524, 7.7767706)
+collide_with_areas = true
+
+[node name="node_5_0 14_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=792412194]
+target_position = Vector3(-2.0483847, 6.691306, 7.1435666)
+collide_with_areas = true
+
+[node name="@RayCast3D@67022" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=972232488]
+target_position = Vector3(-1.0342577, -6.691306, 7.359126)
+collide_with_areas = true
+
+[node name="@RayCast3D@67023" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=196904833]
+target_position = Vector3(-1.125934, -5.8778524, 8.011437)
+collide_with_areas = true
+
+[node name="@RayCast3D@67024" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1677995612]
+target_position = Vector3(-1.2052745, -5, 8.5759735)
+collide_with_areas = true
+
+[node name="@RayCast3D@67025" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1327359435]
+target_position = Vector3(-1.2714095, -4.0673666, 9.046549)
+collide_with_areas = true
+
+[node name="@RayCast3D@67026" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=125732913]
+target_position = Vector3(-1.3236148, -3.09017, 9.418009)
+collide_with_areas = true
+
+[node name="@RayCast3D@67027" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=718670126]
+target_position = Vector3(-1.3613183, -2.0791168, 9.686283)
+collide_with_areas = true
+
+[node name="node_6_0 6_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1802220727]
+target_position = Vector3(-1.384107, -1.0452846, 9.848433)
+collide_with_areas = true
+
+[node name="node_6_0 7_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=761999440]
+target_position = Vector3(-1.391731, 0, 9.90268)
+collide_with_areas = true
+
+[node name="node_6_0 8_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1137786543]
+target_position = Vector3(-1.384107, 1.0452846, 9.848433)
+collide_with_areas = true
+
+[node name="node_6_0 9_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1259334237]
+target_position = Vector3(-1.3613183, 2.0791168, 9.686283)
+collide_with_areas = true
+
+[node name="node_6_0 10_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=324863675]
+target_position = Vector3(-1.3236148, 3.09017, 9.418009)
+collide_with_areas = true
+
+[node name="node_6_0 11_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1212057786]
+target_position = Vector3(-1.2714095, 4.0673666, 9.046549)
+collide_with_areas = true
+
+[node name="node_6_0 12_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1111216070]
+target_position = Vector3(-1.2052745, 5, 8.5759735)
+collide_with_areas = true
+
+[node name="node_6_0 13_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1018388167]
+target_position = Vector3(-1.125934, 5.8778524, 8.011437)
+collide_with_areas = true
+
+[node name="node_6_0 14_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1751124669]
+target_position = Vector3(-1.0342577, 6.691306, 7.359126)
+collide_with_areas = true
+
+[node name="@RayCast3D@67028" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=914562757]
+target_position = Vector3(0, -6.691306, 7.4314485)
+collide_with_areas = true
+
+[node name="@RayCast3D@67029" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=780878998]
+target_position = Vector3(0, -5.8778524, 8.09017)
+collide_with_areas = true
+
+[node name="@RayCast3D@67030" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=191073702]
+target_position = Vector3(0, -5, 8.6602545)
+collide_with_areas = true
+
+[node name="@RayCast3D@67031" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1789396990]
+target_position = Vector3(0, -4.0673666, 9.135454)
+collide_with_areas = true
+
+[node name="@RayCast3D@67032" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=41235316]
+target_position = Vector3(0, -3.09017, 9.510565)
+collide_with_areas = true
+
+[node name="@RayCast3D@67033" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1803014284]
+target_position = Vector3(0, -2.0791168, 9.781476)
+collide_with_areas = true
+
+[node name="node_7_0 6_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=495251428]
+target_position = Vector3(0, -1.0452846, 9.945219)
+collide_with_areas = true
+
+[node name="node_7_0 7_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=446627977]
+target_position = Vector3(0, 0, 10)
+collide_with_areas = true
+
+[node name="node_7_0 8_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=270465406]
+target_position = Vector3(0, 1.0452846, 9.945219)
+collide_with_areas = true
+
+[node name="node_7_0 9_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=2041805707]
+target_position = Vector3(0, 2.0791168, 9.781476)
+collide_with_areas = true
+
+[node name="node_7_0 10_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1874315084]
+target_position = Vector3(0, 3.09017, 9.510565)
+collide_with_areas = true
+
+[node name="node_7_0 11_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1827671357]
+target_position = Vector3(0, 4.0673666, 9.135454)
+collide_with_areas = true
+
+[node name="node_7_0 12_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1727784279]
+target_position = Vector3(0, 5, 8.6602545)
+collide_with_areas = true
+
+[node name="node_7_0 13_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1692331121]
+target_position = Vector3(0, 5.8778524, 8.09017)
+collide_with_areas = true
+
+[node name="node_7_0 14_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=466369864]
+target_position = Vector3(0, 6.691306, 7.4314485)
+collide_with_areas = true
+
+[node name="@RayCast3D@67034" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=659125314]
+target_position = Vector3(1.0342577, -6.691306, 7.359126)
+collide_with_areas = true
+
+[node name="@RayCast3D@67035" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=831937404]
+target_position = Vector3(1.125934, -5.8778524, 8.011437)
+collide_with_areas = true
+
+[node name="@RayCast3D@67036" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1207679776]
+target_position = Vector3(1.2052745, -5, 8.5759735)
+collide_with_areas = true
+
+[node name="@RayCast3D@67037" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=893318731]
+target_position = Vector3(1.2714095, -4.0673666, 9.046549)
+collide_with_areas = true
+
+[node name="@RayCast3D@67038" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1851293291]
+target_position = Vector3(1.3236148, -3.09017, 9.418009)
+collide_with_areas = true
+
+[node name="@RayCast3D@67039" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=886967651]
+target_position = Vector3(1.3613183, -2.0791168, 9.686283)
+collide_with_areas = true
+
+[node name="node_8_0 6_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=382679685]
+target_position = Vector3(1.384107, -1.0452846, 9.848433)
+collide_with_areas = true
+
+[node name="node_8_0 7_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1945119955]
+target_position = Vector3(1.391731, 0, 9.90268)
+collide_with_areas = true
+
+[node name="node_8_0 8_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1535242368]
+target_position = Vector3(1.384107, 1.0452846, 9.848433)
+collide_with_areas = true
+
+[node name="node_8_0 9_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=286257271]
+target_position = Vector3(1.3613183, 2.0791168, 9.686283)
+collide_with_areas = true
+
+[node name="node_8_0 10_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=196514200]
+target_position = Vector3(1.3236148, 3.09017, 9.418009)
+collide_with_areas = true
+
+[node name="node_8_0 11_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1022333347]
+target_position = Vector3(1.2714095, 4.0673666, 9.046549)
+collide_with_areas = true
+
+[node name="node_8_0 12_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=842491434]
+target_position = Vector3(1.2052745, 5, 8.5759735)
+collide_with_areas = true
+
+[node name="node_8_0 13_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=726971172]
+target_position = Vector3(1.125934, 5.8778524, 8.011437)
+collide_with_areas = true
+
+[node name="node_8_0 14_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1386496264]
+target_position = Vector3(1.0342577, 6.691306, 7.359126)
+collide_with_areas = true
+
+[node name="@RayCast3D@67040" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=793736104]
+target_position = Vector3(2.0483847, -6.691306, 7.1435666)
+collide_with_areas = true
+
+[node name="@RayCast3D@67041" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=761575659]
+target_position = Vector3(2.229953, -5.8778524, 7.7767706)
+collide_with_areas = true
+
+[node name="@RayCast3D@67042" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=2033969841]
+target_position = Vector3(2.3870895, -5, 8.324771)
+collide_with_areas = true
+
+[node name="@RayCast3D@67043" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1957296215]
+target_position = Vector3(2.5180726, -4.0673666, 8.781563)
+collide_with_areas = true
+
+[node name="@RayCast3D@67044" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=934147558]
+target_position = Vector3(2.621467, -3.09017, 9.142142)
+collide_with_areas = true
+
+[node name="@RayCast3D@67045" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1228661393]
+target_position = Vector3(2.6961403, -2.0791168, 9.402558)
+collide_with_areas = true
+
+[node name="node_9_0 6_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=25042603]
+target_position = Vector3(2.7412739, -1.0452846, 9.559958)
+collide_with_areas = true
+
+[node name="node_9_0 7_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=2102359405]
+target_position = Vector3(2.7563736, 0, 9.612617)
+collide_with_areas = true
+
+[node name="node_9_0 8_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1390176123]
+target_position = Vector3(2.7412739, 1.0452846, 9.559958)
+collide_with_areas = true
+
+[node name="node_9_0 9_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=652207689]
+target_position = Vector3(2.6961403, 2.0791168, 9.402558)
+collide_with_areas = true
+
+[node name="node_9_0 10_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1029855373]
+target_position = Vector3(2.621467, 3.09017, 9.142142)
+collide_with_areas = true
+
+[node name="node_9_0 11_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=705024140]
+target_position = Vector3(2.5180726, 4.0673666, 8.781563)
+collide_with_areas = true
+
+[node name="node_9_0 12_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1866794359]
+target_position = Vector3(2.3870895, 5, 8.324771)
+collide_with_areas = true
+
+[node name="node_9_0 13_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1810384115]
+target_position = Vector3(2.229953, 5.8778524, 7.7767706)
+collide_with_areas = true
+
+[node name="node_9_0 14_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=167123966]
+target_position = Vector3(2.0483847, 6.691306, 7.1435666)
+collide_with_areas = true
+
+[node name="@RayCast3D@67046" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1560538028]
+target_position = Vector3(3.0226424, -6.691306, 6.7889657)
+collide_with_areas = true
+
+[node name="@RayCast3D@67047" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=765427931]
+target_position = Vector3(3.2905686, -5.8778524, 7.390738)
+collide_with_areas = true
+
+[node name="@RayCast3D@67048" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=711940721]
+target_position = Vector3(3.5224426, -5, 7.9115357)
+collide_with_areas = true
+
+[node name="@RayCast3D@67049" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=849653858]
+target_position = Vector3(3.7157242, -4.0673666, 8.345653)
+collide_with_areas = true
+
+[node name="@RayCast3D@67050" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=971420659]
+target_position = Vector3(3.8682954, -3.09017, 8.6883335)
+collide_with_areas = true
+
+[node name="@RayCast3D@67051" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1862103654]
+target_position = Vector3(3.9784846, -2.0791168, 8.935823)
+collide_with_areas = true
+
+[node name="@RayCast3D@67052" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1342050691]
+target_position = Vector3(4.045085, -1.0452846, 9.085409)
+collide_with_areas = true
+
+[node name="@RayCast3D@67053" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1729945661]
+target_position = Vector3(4.0673666, 0, 9.135454)
+collide_with_areas = true
+
+[node name="@RayCast3D@67054" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1509531350]
+target_position = Vector3(4.045085, 1.0452846, 9.085409)
+collide_with_areas = true
+
+[node name="@RayCast3D@67055" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=353177615]
+target_position = Vector3(3.9784846, 2.0791168, 8.935823)
+collide_with_areas = true
+
+[node name="node_10_0 10_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=688817177]
+target_position = Vector3(3.8682954, 3.09017, 8.6883335)
+collide_with_areas = true
+
+[node name="node_10_0 11_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=906823347]
+target_position = Vector3(3.7157242, 4.0673666, 8.345653)
+collide_with_areas = true
+
+[node name="node_10_0 12_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=982592701]
+target_position = Vector3(3.5224426, 5, 7.9115357)
+collide_with_areas = true
+
+[node name="node_10_0 13_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=261187057]
+target_position = Vector3(3.2905686, 5.8778524, 7.390738)
+collide_with_areas = true
+
+[node name="node_10_0 14_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=903663752]
+target_position = Vector3(3.0226424, 6.691306, 6.7889657)
+collide_with_areas = true
+
+[node name="@RayCast3D@67056" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=436763974]
+target_position = Vector3(3.9380677, -6.691306, 6.3022256)
+collide_with_areas = true
+
+[node name="@RayCast3D@67057" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=678990185]
+target_position = Vector3(4.287137, -5.8778524, 6.860853)
+collide_with_areas = true
+
+[node name="@RayCast3D@67058" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=994614440]
+target_position = Vector3(4.5892353, -5, 7.3443117)
+collide_with_areas = true
+
+[node name="@RayCast3D@67059" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=962327291]
+target_position = Vector3(4.8410535, -4.0673666, 7.747305)
+collide_with_areas = true
+
+[node name="@RayCast3D@67060" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=625149549]
+target_position = Vector3(5.0398316, -3.09017, 8.065416)
+collide_with_areas = true
+
+[node name="@RayCast3D@67061" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1688733644]
+target_position = Vector3(5.1833925, -2.0791168, 8.295162)
+collide_with_areas = true
+
+[node name="@RayCast3D@67062" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=547665836]
+target_position = Vector3(5.270163, -1.0452846, 8.434024)
+collide_with_areas = true
+
+[node name="@RayCast3D@67063" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=481214748]
+target_position = Vector3(5.2991924, 0, 8.480481)
+collide_with_areas = true
+
+[node name="@RayCast3D@67064" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=571045180]
+target_position = Vector3(5.270163, 1.0452846, 8.434024)
+collide_with_areas = true
+
+[node name="@RayCast3D@67065" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1173552910]
+target_position = Vector3(5.1833925, 2.0791168, 8.295162)
+collide_with_areas = true
+
+[node name="node_11_0 10_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=103611034]
+target_position = Vector3(5.0398316, 3.09017, 8.065416)
+collide_with_areas = true
+
+[node name="node_11_0 11_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=303898118]
+target_position = Vector3(4.8410535, 4.0673666, 7.747305)
+collide_with_areas = true
+
+[node name="node_11_0 12_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1123219416]
+target_position = Vector3(4.5892353, 5, 7.3443117)
+collide_with_areas = true
+
+[node name="node_11_0 13_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1803324389]
+target_position = Vector3(4.287137, 5.8778524, 6.860853)
+collide_with_areas = true
+
+[node name="node_11_0 14_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=762280019]
+target_position = Vector3(3.9380677, 6.691306, 6.3022256)
+collide_with_areas = true
+
+[node name="@RayCast3D@67066" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=137791604]
+target_position = Vector3(4.776843, -6.691306, 5.6928196)
+collide_with_areas = true
+
+[node name="@RayCast3D@67067" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1803405183]
+target_position = Vector3(5.200261, -5.8778524, 6.1974297)
+collide_with_areas = true
+
+[node name="@RayCast3D@67068" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1656310047]
+target_position = Vector3(5.566704, -5, 6.6341395)
+collide_with_areas = true
+
+[node name="@RayCast3D@67069" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1279741268]
+target_position = Vector3(5.872157, -4.0673666, 6.998164)
+collide_with_areas = true
+
+[node name="@RayCast3D@67070" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1812249566]
+target_position = Vector3(6.1132736, -3.09017, 7.285516)
+collide_with_areas = true
+
+[node name="@RayCast3D@67071" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=172215860]
+target_position = Vector3(6.2874117, -2.0791168, 7.4930453)
+collide_with_areas = true
+
+[node name="@RayCast3D@67072" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=85960717]
+target_position = Vector3(6.3926635, -1.0452846, 7.6184797)
+collide_with_areas = true
+
+[node name="@RayCast3D@67073" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=495995149]
+target_position = Vector3(6.427876, 0, 7.6604443)
+collide_with_areas = true
+
+[node name="@RayCast3D@67074" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1339725124]
+target_position = Vector3(6.3926635, 1.0452846, 7.6184797)
+collide_with_areas = true
+
+[node name="@RayCast3D@67075" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=358124121]
+target_position = Vector3(6.2874117, 2.0791168, 7.4930453)
+collide_with_areas = true
+
+[node name="node_12_0 10_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=2129615960]
+target_position = Vector3(6.1132736, 3.09017, 7.285516)
+collide_with_areas = true
+
+[node name="node_12_0 11_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1147108981]
+target_position = Vector3(5.872157, 4.0673666, 6.998164)
+collide_with_areas = true
+
+[node name="node_12_0 12_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1416422537]
+target_position = Vector3(5.566704, 5, 6.6341395)
+collide_with_areas = true
+
+[node name="node_12_0 13_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=58766128]
+target_position = Vector3(5.200261, 5.8778524, 6.1974297)
+collide_with_areas = true
+
+[node name="node_12_0 14_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=2070801816]
+target_position = Vector3(4.776843, 6.691306, 5.6928196)
+collide_with_areas = true
+
+[node name="@RayCast3D@67076" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=77884534]
+target_position = Vector3(5.522642, -6.691306, 4.9726095)
+collide_with_areas = true
+
+[node name="@RayCast3D@67077" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1493417698]
+target_position = Vector3(6.012168, -5.8778524, 5.41338)
+collide_with_areas = true
+
+[node name="@RayCast3D@67078" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=73352183]
+target_position = Vector3(6.435823, -5, 5.794841)
+collide_with_areas = true
+
+[node name="@RayCast3D@67079" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=114638641]
+target_position = Vector3(6.7889657, -4.0673666, 6.112812)
+collide_with_areas = true
+
+[node name="@RayCast3D@67080" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=344865194]
+target_position = Vector3(7.067727, -3.09017, 6.36381)
+collide_with_areas = true
+
+[node name="@RayCast3D@67081" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1645109703]
+target_position = Vector3(7.2690535, -2.0791168, 6.545085)
+collide_with_areas = true
+
+[node name="@RayCast3D@67082" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=43796469]
+target_position = Vector3(7.390738, -1.0452846, 6.65465)
+collide_with_areas = true
+
+[node name="@RayCast3D@67083" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1984167612]
+target_position = Vector3(7.4314485, 0, 6.691306)
+collide_with_areas = true
+
+[node name="@RayCast3D@67084" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1429851382]
+target_position = Vector3(7.390738, 1.0452846, 6.65465)
+collide_with_areas = true
+
+[node name="@RayCast3D@67085" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1319168846]
+target_position = Vector3(7.2690535, 2.0791168, 6.545085)
+collide_with_areas = true
+
+[node name="node_13_0 10_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=365322273]
+target_position = Vector3(7.067727, 3.09017, 6.36381)
+collide_with_areas = true
+
+[node name="node_13_0 11_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=424110079]
+target_position = Vector3(6.7889657, 4.0673666, 6.112812)
+collide_with_areas = true
+
+[node name="node_13_0 12_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1441604670]
+target_position = Vector3(6.435823, 5, 5.794841)
+collide_with_areas = true
+
+[node name="node_13_0 13_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=489842159]
+target_position = Vector3(6.012168, 5.8778524, 5.41338)
+collide_with_areas = true
+
+[node name="node_13_0 14_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=520607309]
+target_position = Vector3(5.522642, 6.691306, 4.9726095)
+collide_with_areas = true
+
+[node name="@RayCast3D@67086" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=674867790]
+target_position = Vector3(6.1609497, -6.691306, 4.155613)
+collide_with_areas = true
+
+[node name="@RayCast3D@67087" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=699419876]
+target_position = Vector3(6.7070546, -5.8778524, 4.523966)
+collide_with_areas = true
+
+[node name="@RayCast3D@67088" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=918921882]
+target_position = Vector3(7.179676, -5, 4.8427525)
+collide_with_areas = true
+
+[node name="@RayCast3D@67089" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1331645077]
+target_position = Vector3(7.573635, -4.0673666, 5.1084814)
+collide_with_areas = true
+
+[node name="@RayCast3D@67090" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1195144622]
+target_position = Vector3(7.884616, -3.09017, 5.3182406)
+collide_with_areas = true
+
+[node name="@RayCast3D@67091" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=853276492]
+target_position = Vector3(8.109211, -2.0791168, 5.469732)
+collide_with_areas = true
+
+[node name="@RayCast3D@67092" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1082560728]
+target_position = Vector3(8.24496, -1.0452846, 5.561296)
+collide_with_areas = true
+
+[node name="@RayCast3D@67093" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1277776054]
+target_position = Vector3(8.290376, 0, 5.591929)
+collide_with_areas = true
+
+[node name="@RayCast3D@67094" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1512607758]
+target_position = Vector3(8.24496, 1.0452846, 5.561296)
+collide_with_areas = true
+
+[node name="@RayCast3D@67095" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1890836868]
+target_position = Vector3(8.109211, 2.0791168, 5.469732)
+collide_with_areas = true
+
+[node name="node_14_0 10_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=1682228596]
+target_position = Vector3(7.884616, 3.09017, 5.3182406)
+collide_with_areas = true
+
+[node name="node_14_0 11_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=968961034]
+target_position = Vector3(7.573635, 4.0673666, 5.1084814)
+collide_with_areas = true
+
+[node name="node_14_0 12_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=126799374]
+target_position = Vector3(7.179676, 5, 4.8427525)
+collide_with_areas = true
+
+[node name="node_14_0 13_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=943087909]
+target_position = Vector3(6.7070546, 5.8778524, 4.523966)
+collide_with_areas = true
+
+[node name="node_14_0 14_0" type="RayCast3D" parent="AIController3D/RayCastSensor3D" unique_id=755371360]
+target_position = Vector3(6.1609497, 6.691306, 4.155613)
+collide_with_areas = true

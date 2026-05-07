@@ -1,6 +1,9 @@
 extends CharacterBody3D
 
 @onready var ai_controller = $AIController3D
+@onready var goal = $/root/Main/Goal
+@onready var initial_transform := transform
+@onready var best_distance_to_goal = global_position.distance_to(goal.global_position)
 
 @export var max_speed = 3
 @export var rotation_speed = 3
@@ -8,15 +11,18 @@ extends CharacterBody3D
 var current_speed = 0
 var angular_velocity : Quaternion
 var linear_velocity = Vector3.ZERO
+var current_distance_to_goal : float
 
 func _ready():
 	ai_controller.init(self)
 
-func game_over():
+func game_over(reward: float = 0):
+	ai_controller.reward += reward
 	ai_controller.done = true
-	ai_controller.needs_reset = true
+	ai_controller.reset()
+	transform = initial_transform
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if ai_controller.needs_reset:
 		ai_controller.reset()
 		return
@@ -41,9 +47,10 @@ func _physics_process(delta):
 		pitch = ai_controller.rotate_action.x * rotation_speed
 		yaw = ai_controller.rotate_action.z * rotation_speed
 		roll = ai_controller.rotate_action.y * rotation_speed
+	if ai_controller.rotate_action != Vector3.ZERO:
+		ai_controller.reward -= 0.1
 	
-	
-	var rotation_vector = Vector3(deg_to_rad(roll), deg_to_rad(yaw), deg_to_rad(pitch)) * delta
+	var rotation_vector = Vector3(deg_to_rad(roll), deg_to_rad(yaw), deg_to_rad(pitch)) * _delta
 	var relative_velocity = Quaternion.from_euler(rotation_vector)
 	angular_velocity = (angular_velocity * relative_velocity).slerp(Quaternion.IDENTITY, 0.1)
 	
@@ -80,10 +87,18 @@ func _physics_process(delta):
 	
 	if linear_direction != Vector3.ZERO:
 		linear_direction = linear_direction.normalized()
+		ai_controller.reward -= 0.1
 	linear_velocity = final_rotation * linear_direction
 	
 	velocity = velocity.move_toward(linear_velocity * max_speed, 0.1)
 	move_and_slide()
+	if move_and_slide() == true:
+		game_over(-20)
 	
-#func _on_area_3d_body_entered(body):
-#	ai_controller.reward += 1.0
+	current_distance_to_goal = global_position.distance_to(goal.global_position)
+	if current_distance_to_goal < best_distance_to_goal:
+		ai_controller.reward += 1
+	best_distance_to_goal = current_distance_to_goal
+
+func _on_goal_body_entered(_body: Node3D) -> void:
+	game_over(1000)
