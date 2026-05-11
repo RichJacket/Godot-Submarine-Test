@@ -175,7 +175,6 @@ shadow_enabled = true
 
 [node name="Sync" type="Node" parent="." unique_id=1014860788]
 script = ExtResource("2_0xm2m")
-speed_up = 4.0
 metadata/_custom_type_script = "uid://chqlmrjivkg5v"
 
 [connection signal="body_entered" from="Goal" to="Player" method="_on_goal_body_entered"]
