@@ -1,7 +1,7 @@
 Usage:
 - Install Python (used Python 3.14.4)
 - Create and activate a `venv` and run `pip install godot-rl` (used 0.8.2)
-- Run `stable_baselines3_example.py`
+- Run `stable_baselines3_example.py` from terminal
 
 Arguments for the Python script:
 - `--env_path=path\to\env.exe` - Path to the environment executable
