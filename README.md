@@ -2,6 +2,7 @@ Usage:
 - Install Python (used Python 3.14.4)
 - Create and activate a `venv` and run `pip install godot-rl` (used 0.8.2)
 - Run `stable_baselines3_example.py`
+
 Arguments for the Python script:
 - `--env_path=path\to\env.exe` - Path to the environment executable
 - `--experiment_name="name"` - Name for the save folder of the experiment (will be saved under `venv\logs\sb3\name`, if an experiment with that name already exists training cannot be run)
