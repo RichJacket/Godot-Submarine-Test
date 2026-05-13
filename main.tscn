@@ -64,7 +64,7 @@ fog_density = 0.001
 [node name="Main" type="Node" unique_id=481591065]
 
 [node name="Player" parent="." unique_id=1656411300 instance=ExtResource("1_ig7tw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 7, 22)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -18, 7, 22)
 
 [node name="RemoteTransform3D" type="RemoteTransform3D" parent="Player" unique_id=882284519]
 remote_path = NodePath("../Temp/Gimbal")
@@ -74,7 +74,7 @@ update_scale = false
 [node name="Temp" type="Node" parent="Player" unique_id=1800715240]
 
 [node name="Gimbal" type="Node3D" parent="Player/Temp" unique_id=1073324723]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 7, 22)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 7, 22)
 
 [node name="OrbitCamera" type="Camera3D" parent="Player/Temp/Gimbal" unique_id=85534491]
 script = ExtResource("2_h2yge")
@@ -82,7 +82,7 @@ ANCHOR_NODE_PATH = NodePath("..")
 metadata/_custom_type_script = "uid://c1o13dbeueek2"
 
 [node name="Goal" type="Area3D" parent="." unique_id=836537992]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 10, 3, -10)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 10, 3, -16)
 collision_layer = 2
 collision_mask = 4
 
@@ -95,7 +95,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_h2yge")
 shape = SubResource("SphereShape3D_1bvp3")
 
 [node name="Obstacle1" type="StaticBody3D" parent="." unique_id=482881845]
-transform = Transform3D(0.96592593, -0.25881907, 0, 0.25881907, 0.96592593, 0, 0, 0, 1, -17, 0, -7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 0, -7)
 collision_mask = 5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacle1" unique_id=1394547952]
@@ -119,7 +119,7 @@ mesh = SubResource("BoxMesh_1bvp3")
 surface_material_override/0 = SubResource("StandardMaterial3D_1bvp3")
 
 [node name="Obstacle3" type="StaticBody3D" parent="." unique_id=1924914405]
-transform = Transform3D(0.9330128, 0.25000003, 0.25881907, -0.25881907, 0.96592593, 0, -0.25, -0.0669873, 0.9659258, 34, 0, 20)
+transform = Transform3D(0.9330128, 0.25000003, 0.25881907, -0.25881907, 0.96592593, 0, -0.25, -0.0669873, 0.9659258, 36, 0, 20)
 collision_mask = 5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacle3" unique_id=507808134]
@@ -179,7 +179,7 @@ mesh = SubResource("BoxMesh_1bvp3")
 surface_material_override/0 = SubResource("StandardMaterial3D_1bvp3")
 
 [node name="Obstacle8" type="StaticBody3D" parent="." unique_id=185200682]
-transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1.0000001, 0, -1.0000001, 0, -4.371139e-08, 4, 0, -25)
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1.0000001, 0, -1.0000001, 0, -4.371139e-08, -23, 0, -25)
 collision_mask = 5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacle8" unique_id=601091609]
@@ -187,6 +187,30 @@ shape = SubResource("BoxShape3D_h2yge")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Obstacle8" unique_id=978586212]
 transform = Transform3D(10, 3.5762782e-06, 4.7683707e-06, -8.9406944e-07, 40, -1.7881396e-06, -1.1920928e-06, 1.7881392e-06, 40, 0, 0, 0)
+mesh = SubResource("BoxMesh_1bvp3")
+surface_material_override/0 = SubResource("StandardMaterial3D_1bvp3")
+
+[node name="Obstacle9" type="StaticBody3D" parent="." unique_id=1363512060]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1.0000001, 0, -1.0000001, 0, -4.371139e-08, 7, 0, -25)
+collision_mask = 5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacle9" unique_id=930128548]
+shape = SubResource("BoxShape3D_h2yge")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Obstacle9" unique_id=375812455]
+transform = Transform3D(10, 3.5762782e-06, 4.7683707e-06, -8.9406944e-07, 40, -1.7881396e-06, -1.1920928e-06, 1.7881392e-06, 40, 0, 0, 0)
+mesh = SubResource("BoxMesh_1bvp3")
+surface_material_override/0 = SubResource("StandardMaterial3D_1bvp3")
+
+[node name="Obstacle10" type="StaticBody3D" parent="." unique_id=517823378]
+transform = Transform3D(0.7071068, -0.5, 0.49999997, 0, 0.7071068, 0.70710677, -0.7071068, -0.5, 0.49999997, -18, -10, -1)
+collision_mask = 5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacle10" unique_id=421932005]
+shape = SubResource("BoxShape3D_272bh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Obstacle10" unique_id=20838060]
+transform = Transform3D(20, 1.7881391e-06, 2.3841853e-06, -1.7881389e-06, 20, -8.940698e-07, -2.3841856e-06, 8.940696e-07, 20, 0, 0, 0)
 mesh = SubResource("BoxMesh_1bvp3")
 surface_material_override/0 = SubResource("StandardMaterial3D_1bvp3")
 

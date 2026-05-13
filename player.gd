@@ -18,6 +18,9 @@ var n_steps = 0
 
 #Initialize the AI controller
 func _ready():
+	goal.global_position.x = (randi() % 34) - 24 #Delete if dynamic doesn't work
+	goal.global_position.y = (randi() % 12) + 3 #Delete if dynamic doesn't work
+	goal.global_position.z = (randi() % 38) - 16 #Delete if dynamic doesn't work
 	ai_controller.init(self)
 
 #Reset environment on game over (time-out, obstacle crash, goal reached)
@@ -28,6 +31,9 @@ func game_over(ep_reward: float = 0.0):
 	transform = initial_transform
 	reward = 0
 	n_steps = 0
+	goal.global_position.x = (randi() % 34) - 24 #Delete if dynamic doesn't work
+	goal.global_position.y = (randi() % 12) + 3 #Delete if dynamic doesn't work
+	goal.global_position.z = (randi() % 38) - 16 #Delete if dynamic doesn't work
 	#current_distance_to_goal = global_position.distance_to(goal.global_position)
 	#previous_distance_to_goal = current_distance_to_goal
 
