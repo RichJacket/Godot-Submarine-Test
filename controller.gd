@@ -15,7 +15,7 @@ func get_info() -> Dictionary:
 #Get observation space data (raycast data; player position, velocity, rotation)
 func get_obs() -> Dictionary:
 	var obs: Array[float] = []
-	#obs.append_array(raycast_sensor.get_observation())
+	obs.append_array(raycast_sensor.get_observation())
 	var player_position = _player.global_position
 	var player_velocity = _player.velocity
 	var player_angle = _player.transform.basis.get_euler()
