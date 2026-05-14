@@ -11,6 +11,6 @@ Arguments for the Python script:
 - `--speedup=X` - Run the physics at X times speed to increase speed of training (used 4)
 - `--learning_rate X` - Learning rate for the NN (used 0.0001)
 - `--timesteps=X` - Amount of timesteps to train for / for inference (used 10 000 000, replace spaces with underscores(!!!))
-- `--save_checkpoint_frequency=50_000` - Checkpoint save interval in timesteps (used 50 000, replace spaces with underscores(!!!))
+- `--save_checkpoint_frequency=X` - Checkpoint save interval X in timesteps (used 50 000, replace spaces with underscores(!!!))
 - `--inference` - Infer model from checkpoints saved in `--experiment_name` folder
 - `--viz` - Run environment visually, slower training but shows results well when inference is running
