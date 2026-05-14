@@ -6,6 +6,7 @@ Usage:
 Arguments for the Python script:
 - `--env_path=path\to\env.exe` - Path to the environment executable
 - `--experiment_name="name"` - Name for the save folder of the experiment (will be saved under `venv\logs\sb3\name`, if an experiment with that name already exists training cannot be run)
+- `--resume_model_path=path\to\checkpoints.zip` - Path to the zip file with saved checkpoints for resuming training / running inference
 - `--n_parallel=X` - Run X models in parallel for training (used 8)
 - `--speedup=X` - Run the physics at X times speed to increase speed of training (used 4)
 - `--learning_rate X` - Learning rate for the NN (used 0.0001)
